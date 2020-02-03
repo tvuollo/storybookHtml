@@ -1,0 +1,30 @@
+.select {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: normal;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.select:not([disabled]):hover,
+.select:not([disabled]):focus {
+    border-color: #555
+}
+
+.select[disabled] {
+    background-color: #eee;
+    cursor: default;
+    opacity: 0.75;
+}
+
+.select--icon {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCAwQzQuNDc5OTggMCAwIDQuNDggMCAxMEMwIDE1LjUyIDQuNDc5OTggMjAgMTAgMjBDMTUuNTIgMjAgMjAgMTUuNTIgMjAgMTBDMjAgNC40OCAxNS41MiAwIDEwIDBaTTUuNzUgMTFDNS43NSAxMC4zMSA2LjMxMDA2IDkuNzUgNyA5Ljc1QzcuNjg5OTQgOS43NSA4LjI1IDEwLjMxIDguMjUgMTFDOC4yNSAxMS42OSA3LjY4OTk0IDEyLjI1IDcgMTIuMjVDNi4zMTAwNiAxMi4yNSA1Ljc1IDExLjY5IDUuNzUgMTFaTTExLjc1IDExQzExLjc1IDEwLjMxIDEyLjMxMDEgOS43NSAxMyA5Ljc1QzEzLjY4OTkgOS43NSAxNC4yNSAxMC4zMSAxNC4yNSAxMUMxNC4yNSAxMS42OSAxMy42ODk5IDEyLjI1IDEzIDEyLjI1QzEyLjMxMDEgMTIuMjUgMTEuNzUgMTEuNjkgMTEuNzUgMTFaTTIgMTBDMiAxNC40MSA1LjU4OTk3IDE4IDEwIDE4QzE0LjQxIDE4IDE4IDE0LjQxIDE4IDEwQzE4IDkuMjEgMTcuODggOC40NSAxNy42NyA3Ljc0QzE2Ljk1IDcuOTEgMTYuMiA4IDE1LjQyIDhDMTIuMDUgOCA5LjA2OTk1IDYuMzI5OTkgNy4yNjAwMSAzLjc3QzYuMjgwMDMgNi4xNiA0LjQxMDAzIDguMDkgMi4wNTAwNSA5LjE0QzIuMDIwMDIgOS40MiAyIDkuNzEgMiAxMFoiIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuNTQiLz4KPC9zdmc+Cg==");
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding-left: 40px;
+}
