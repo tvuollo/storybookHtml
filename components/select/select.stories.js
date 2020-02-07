@@ -1,15 +1,29 @@
+import copyCodeBlock from '@pickra/copy-code-block';
+import { cssOverrides } from './../../.storybook/copyCodeBlockOverrides';
 import './select.css';
 
-export default { title: 'select' };
-
-export const initial = () => '<select class="select">' + optionsString + '</select > ';
-export const disabled = () => '<select class="select" disabled>' + optionsString + '</select>';
-export const icon = () => '<select class="select select--icon">' + optionsString + '</select > ';
-
 // Create option html content
-let options = ['initial', 'option 1', 'option 2', 'option 3'];
-let optionsString = "";
+let Options = ['initial', 'option 1', 'option 2', 'option 3'];
+let OptionsString = "";
 
-options.forEach(function (option) {
-	optionsString = optionsString + '<option value="'+option+'">'+option+'</option>';
+Options.forEach(function (option) {
+	OptionsString = OptionsString + '<option value="'+option+'">'+option+'</option>';
 });
+
+const InitialHtml = `<select class="select">
+	${OptionsString}
+</select>
+`;
+export const Initial = () => InitialHtml + copyCodeBlock(InitialHtml, cssOverrides);
+
+const DisabledHtml = `<select class="select" disabled>
+${OptionsString}
+</select>`;
+export const Disabled = () => DisabledHtml + copyCodeBlock(DisabledHtml, cssOverrides);
+
+const IconHtml = `<select class="select select--icon">
+${OptionsString}
+</select>`;
+export const Icon = () => IconHtml + copyCodeBlock(IconHtml, cssOverrides);
+
+export default { title: 'Select' };

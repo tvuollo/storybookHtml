@@ -1,9 +1,16 @@
+import copyCodeBlock from '@pickra/copy-code-block';
+import { cssOverrides } from './../../.storybook/copyCodeBlockOverrides';
 import './button.css';
 
-export default { title: 'button' };
+const ButtonText = "Button text";
 
-export const initial = () => '<button class="button">' + buttonText+'</button>';
-export const large = () => '<button class="button button--large">' + buttonText + '</button>';
-export const disabled = () => '<button class="button" disabled>' + buttonText + '</button>';
+const InitialHtml = `<button class="button">${ButtonText}</button>`;
+export const Initial = () => InitialHtml + copyCodeBlock(InitialHtml, cssOverrides);
 
-const buttonText = "Button text";
+const LargeHtml = `<button class="button button--large">${ButtonText}</button>`;
+export const Large = () => LargeHtml + copyCodeBlock(LargeHtml, cssOverrides);
+
+const DisabledHtml = `<button class="button" disabled>${ButtonText}</button>`;
+export const Disabled = () => DisabledHtml + copyCodeBlock(DisabledHtml, cssOverrides);
+
+export default { title: 'Button' };
